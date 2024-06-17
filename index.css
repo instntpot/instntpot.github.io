@@ -23,20 +23,45 @@
 }
 
 body {
-    background-image: url("webbg.png");
+    background-image: url("images/webbg.png");
     background-size: 75%;
     font-family: comicsans;
     color:rgb(255, 196, 225);
 }
 
-#topbar {
-    position: fixed;
+.topbar {
+    position: sticky;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
     top: 0;
     height: 10%;
-    width: 100%;
-    background-color: #24000b;
+    font-size: 150%;
+    background-color: #c300dd50;
+    filter: drop-shadow(0 0 10px rgba(242, 0, 255, 0.685));
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.main {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cooltext {
+    background: linear-gradient(60deg, #ff0080, #d400ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+a {
+    color:#aa29ff
+}
+
+a:visited {
+    color:#ff29ca
 }
