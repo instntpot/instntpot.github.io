@@ -39,7 +39,7 @@ body {
     height: 10%;
     font-size: 150%;
     background-color: #e311ff60;
-    filter: drop-shadow(0 0 10px #e311ff60);
+    box-shadow: inset 0 0 100px #ec5cff9d;
     backdrop-filter: blur(10px);
     border-radius: 15px;
 }
