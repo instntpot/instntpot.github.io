@@ -1,25 +1,33 @@
 @import url(../base.css);
 
-.main {
-    display: flex;
-    margin: auto;
-    align-items: center;
-    flex-direction: column;
-}
-
 .cooltext {
+    /*background: linear-gradient(60deg, #078d70, #98e8c1, #ffffff, #7bade2, #3d1a78);*/
     background: linear-gradient(60deg, #ff0080, #d400ff);
     background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
 }
 
-@keyframes links {
-    0%, 100% {transform: scaleY(150%); color:#aa29ff;}
-    50% {transform: scaleY(75%); color: #ff29ca;}
+.awesomebox {
+    text-shadow: 0 0 2px;
+    padding: 0 10px 0 10px;
+    border: 2px solid rgb(255, 92, 71);
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0 0 5px rgba(255, 109, 83, 0.5);
+    background-image: radial-gradient(rgba(133, 47, 36, 0.65), rgba(94, 45, 25, 0.65) 20%, rgba(53, 26, 3, 0.5) 50%), linear-gradient(0, #ff757014 0%, #ff8d706f 2.5%, #ffb07014 27.5%);
+    background-repeat: repeat;
+    background-size: 10px 10px, 100% 500px;
+    animation: textbox-scroll 5s linear infinite;
+    max-width: 50%;
+    backdrop-filter: blur(5px);
+}
+  
+@keyframes textbox-scroll {
+    from {background-position: 0 0;}
+    to {background-position: 80px 40px, 0 500px;}
 }
 
-.links {
+#links {
     animation-name: links;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -27,27 +35,36 @@
     margin-bottom: 0;
 }
 
-button p {
-    color:rgb(255, 196, 225);
-    font-family: comicsans;
-    font-size: 125%;
+@keyframes links {
+    0%, 100% {transform: scaleY(150%); color:#aa29ff;}
+    50% {transform: scaleY(75%); color: #ff29ca;}
 }
 
-#otherwrapper {
+.otherwrapper {
     display: grid;
     height: auto;
-    width: 30%;
-    min-width: 425px;
+    width: 60%;
+    max-width: 400px;
+    min-width: max-content;
     grid-template-rows: 1fr;
-    transition: 0.5s cubic-bezier(.35,.55,.49,.89);
+    transition: 0.5s cubic-bezier(.3,.5,.6,1);
 }
 
-#otherwrapper[disabled] {
+.otherbutton {
+    width: 60vw;
+    min-width: 275px;
+    max-width: 525px;
+}
+
+.otherwrapper[disabled] {
     grid-template-rows: 0fr;
-    transition: 0.5s cubic-bezier(.35,.55,.49,.89);
+    transition: 0.5s cubic-bezier(.3,.5,.6,1);
 }
 
-#otherstuff {
+.otherstuff {
+    width: calc(60vw - 25px);
+    min-width: 250px;
+    max-width: 500px;
     background-color: #ff259262;
     backdrop-filter: blur(5px);
     border-radius: 0 0 5px 5px;
